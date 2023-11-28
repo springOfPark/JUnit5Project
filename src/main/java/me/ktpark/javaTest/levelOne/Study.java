@@ -2,11 +2,18 @@ package me.ktpark.javaTest.levelOne;
 
 public class Study {
 
+    private String name;
+
     private StudyStatus studyStatus;
 
     private int limit;
 
     public Study() { }
+
+    public Study(int limit, String name) {
+        this.name = name;
+        this.limit = limit;
+    }
 
     public Study(int limit) {
         if (limit < 0) {
@@ -33,5 +40,22 @@ public class Study {
 
     public void setLimit(int limit) {
         this.limit = limit;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    @Override
+    public String toString() {
+        return "Study{" +
+                "name='" + name + '\'' +
+                ", studyStatus=" + studyStatus.name() +
+                ", limit=" + limit +
+                '}';
     }
 }
