@@ -25,8 +25,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
-            <!-- Spring Boot 2.7.x 취약성 문제 해결을 위한 Dependency 제거 -->
-            <!-- vulnerable dependency maven:org.yaml:snakeyaml -->
             <exclusions>
                 <exclusion>
                     <groupId>org.yaml</groupId>
@@ -34,8 +32,6 @@
                 </exclusion>
             </exclusions>
         </dependency>
-        <!-- Spring Boot 2.7.x 취약성 문제 해결을 위한 Dependency 추가 -->
-        <!-- vulnerable dependency maven:org.yaml:snakeyaml -->
         <dependency>
             <groupId>org.yaml</groupId>
             <artifactId>snakeyaml</artifactId>
